@@ -1,0 +1,14 @@
+#!/bin/bash
+
+mkdir -p /deac/csc/classes/csc191/$USER/activities/activity_01
+cd /deac/csc/classes/csc191/$USER/activities/activity_01
+
+rm -rf ./bashcrawl/ 2> /dev/null
+tar xf /deac/csc/classes/csc191/software/bashcrawl/bashcrawl.tar.gz
+
+export PROMPT_COMMAND=/deac/csc/classes/csc191/$USER/activities/activity_01/bashcrawl/.check_inventory
+
+echo "iat6vOf3EUfYwSlgw3GW6znJ1NEzMCVd4s2bYEmZvM0=" > /deac/csc/classes/csc191/${USER}/activities/activity_01/bashcrawl/.achievements
+NUM_ACHIEVEMENTS=`sort -u /deac/csc/classes/csc191/${USER}/activities/activity_01/bashcrawl/.achievements | wc -l | awk '{print $1}'`
+echo "The Adventure Begins!"
+echo "${NUM_ACHIEVEMENTS}/7 ACHIEVEMENTS UNLOCKED"
