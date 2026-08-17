@@ -1,0 +1,29 @@
+#!/bin/bash
+
+if ! grep --quiet "tvCiJD0rg5N6DVb/NL0iXbUQ2Ap2J2yDTAAEuWB1+0E=" /deac/csc/classes/csc191/${USER}/activities/activity_01/bashcrawl/.achievements; then
+
+	if echo $I | grep  --quiet sword; then
+
+		echo "tvCiJD0rg5N6DVb/NL0iXbUQ2Ap2J2yDTAAEuWB1+0E=" >> /deac/csc/classes/csc191/${USER}/activities/activity_01/bashcrawl/.achievements
+    		NUM_ACHIEVEMENTS=`sort -u /deac/csc/classes/csc191/${USER}/activities/activity_01/bashcrawl/.achievements | wc -l | awk '{print $1}'`
+    		echo "Sword GET!"
+    		echo "${NUM_ACHIEVEMENTS}/7 ACHIEVEMENTS UNLOCKED"
+
+	fi
+
+	exit
+fi
+
+if ! grep --quiet "5+c9mzV3dDfA6ZhUqLx62FVR+Qwpj9VwU1+TEdUomfQ=" /deac/csc/classes/csc191/${USER}/activities/activity_01/bashcrawl/.achievements; then
+
+	if echo $I | grep  --quiet armour; then
+
+		echo "5+c9mzV3dDfA6ZhUqLx62FVR+Qwpj9VwU1+TEdUomfQ=" >> /deac/csc/classes/csc191/${USER}/activities/activity_01/bashcrawl/.achievements
+    		NUM_ACHIEVEMENTS=`sort -u /deac/csc/classes/csc191/${USER}/activities/activity_01/bashcrawl/.achievements | wc -l | awk '{print $1}'`
+    		echo "Armor GET!"
+    		echo "${NUM_ACHIEVEMENTS}/7 ACHIEVEMENTS UNLOCKED"
+
+	fi
+
+	exit
+fi
