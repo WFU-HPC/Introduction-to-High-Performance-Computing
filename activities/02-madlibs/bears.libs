@@ -1,0 +1,24 @@
+#!/bin/bash
+
+export ADJECTIVE_1=
+export NOUN_1=Pidgeon
+export NOUN_PLURAL=
+export ADJECTIVE_2=
+export ADJECTIVE_3=
+export ING_VERB_1=
+export ING_VERB_2=
+export ADJECTIVE_4=
+export ADJECTIVE_5=
+export NOUN_2=
+export TYPE_OF_FOOD_PLURAL_1=
+export BODY_PART_PLURAL=
+export ADJECTIVE_6=
+export VEHICLE=
+export TYPE_OF_FOOD_PLURAL_2=
+export TYPE_OF_FOOD_PLURAL_3=
+export SOMETHING_ALIVE_PLURAL_1=
+export SOMETHING_ALIVE_PLURAL_2=
+export ADVERB=
+export NOUN_3=
+ 
+/deac/csc/classes/csc191/software/madlibs/bears 0
