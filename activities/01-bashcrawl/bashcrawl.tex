@@ -1,0 +1,118 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CSC 191   Cody Stevens
+% 01/30/2024
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[10pt, twoside]{article}
+
+\textwidth=6.5in
+\textheight=8.5in
+\oddsidemargin=0pc
+\evensidemargin=0pc
+\headsep=0.05in
+\headheight=12.0pt
+
+\usepackage{boxedminipage}
+\usepackage{fancyhdr}
+\usepackage{fancyv rb}
+\usepackage{graphicx}
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage{listings}
+\usepackage{parskip}
+\usepackage{ulem}
+\usepackage{xcolor}
+
+\newcounter{qcnt}
+\newcounter{sqcnt}
+
+\newcommand{\question}[1]
+   {\indent \parbox[t]{6.25in}{\arabic{qcnt}. \hfill
+   \parbox[t]{6.0in}{#1} \\ \\}
+    \addtocounter{qcnt}{1} \setcounter{sqcnt}{1}}
+
+\newcommand{\pquestion}[2]
+   {\indent \parbox[t]{6.25in}{\arabic{qcnt}. \hfill
+   \parbox[t]{6.0in}{\textit{\textsf{(#2 points)}}~~#1} \\ \\}
+    \addtocounter{qcnt}{1} \setcounter{sqcnt}{1}}
+
+\newcommand{\TFquestion}[1]
+   {\indent \parbox[t]{6.25in}{\underline{~~~~~~~~~~~~} \arabic{qcnt}. \hfill
+   \parbox[t]{6.0in}{#1} \\ \\}
+    \addtocounter{qcnt}{1} \setcounter{sqcnt}{1}}
+
+\newcommand{\DottedLine}
+    {\mbox{ } \hfill \parbox[t]{6.2in}{\dotfill} \\ \\}
+
+\newcommand{\Section}[2]
+    {\noindent {\large #1:} \textsf{\normalsize #2} \\}
+
+\newcommand{\lbox}[1]
+{ \shortstack{\texttt{#1} \\
+              \fbox{~~~~~~~~ \rule[-0.45in]{0.0in}{0.45in} }}}
+
+\newcommand{\ebox}[1]
+{ \shortstack{\texttt{#1} \\
+              \fbox{~~~~~~~~~~~~~~~~ \rule[-0.35in]{0.0in}{0.45in} }}}
+              
+\pagestyle{fancy}
+\rhead{}\chead{}\lhead{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\cfoot{\shortstack{\textit{\textsf{\footnotesize CSC 191}} \\
+\textit{\textsf{\footnotesize}} \\ \thepage}}
+\lfoot{\vspace{-0.35in}\fbox{~~~~~~~~~~~~~~~~ \rule[-0.45in]{0.0in}{0.45in} }}
+\rfoot{\vspace{-0.35in}\fbox{~~~~~~~~~~~~~~~~ \rule[-0.45in]{0.0in}{0.45in} }}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\setcounter{qcnt}{1}
+\setcounter{sqcnt}{1}
+\parbox{3.0in}{{\large \textbf{CSC 191: Activity 01}}\\Bashcrawl\\}\hfill
+\parbox{3.0in}{Name: \hrulefill \vspace{6pt} \\} \\\hrulefill
+
+The ability to interact with a Linux system is paramount to working in a high performance computing cluster. A vast majority of super computers are built on top of the Linux operating system and being able to navigate the Linux file system and understanding the commands you can use to interact with the system are an important for step towards taking advantage of the high powered computing a supercomputer can give you.
+
+\section{Bashcrawl}
+
+Bashcrawl is text based adventure game that you can play through your terminal that is akin to the earliest computer games, such as Dungeon. It is a short game where you will explore different rooms (directories) and interact with files and programs to gain treasure, fight monsters, and become more proficient using different commands in Linux.
+
+%The repository can be found here: \href{https://gitlab.com/slackermedia/bashcrawl}{https://gitlab.com/slackermedia/bashcrawl}
+
+As adventure games developed many text based adventure games later developed graphics and also provided a score or rating to the player for what they accomplished during their adventure. For this assignment you'll earn points based on completing different objects. There are 7 total objectives for you to complete, and you must complete 5 objectives to earn the maximum of 10 points for this activity.
+
+To begin, run the following command after connecting to DEAC:
+
+\vspace{0.2in}
+
+\begin{boxedminipage}[]{0.93\textwidth}
+\begin{verbatim}
+source /deac/csc/classes/csc191/software/bashcrawl/start
+\end{verbatim}
+\end{boxedminipage}
+\newline
+
+If you ever want to reset the adventure you can run the above command again and start a new game.
+
+\subsection{Achievements}
+
+\vspace{0.2in}
+
+\Section{The Adventure Begins!}{Start the game.}
+
+\Section{Sword GET!}{Find and equip the sword within the cellar.}
+
+\Section{Armor GET!}{Enter the rift. Find and equip the armor.}
+
+\Section{Goblet GET!}{Obtain the goblet from the stronghold.}
+
+\Section{Monster Slain!}{Defeat the monster within the hall of the chapel and obtain the crown.}
+
+\Section{Padlock Slain!}{Open the padlock in the graveyard and gain access to the mausoleum.}
+
+\Section{The END!}{Defeat Nyarlathotep in The Pit.}
+
+\end{document}
