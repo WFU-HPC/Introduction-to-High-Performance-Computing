@@ -1,0 +1,136 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CSC 191   Cody Stevens
+% 01/30/2024
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[10pt, twoside]{article}
+
+\textwidth=6.5in
+\textheight=8.5in
+\oddsidemargin=0pc
+\evensidemargin=0pc
+\headsep=0.05in
+\headheight=12.0pt
+
+\usepackage{boxedminipage}
+\usepackage{fancyhdr}
+\usepackage{fancyv rb}
+\usepackage{graphicx}
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage{listings}
+\usepackage{parskip}
+\usepackage{ulem}
+\usepackage{xcolor}
+
+\newcounter{qcnt}
+\newcounter{sqcnt}
+
+\newcommand{\question}[1]
+   {\indent \parbox[t]{6.25in}{\arabic{qcnt}. \hfill
+   \parbox[t]{6.0in}{#1} \\ \\}
+    \addtocounter{qcnt}{1} \setcounter{sqcnt}{1}}
+
+\newcommand{\pquestion}[2]
+   {\indent \parbox[t]{6.25in}{\arabic{qcnt}. \hfill
+   \parbox[t]{6.0in}{\textit{\textsf{(#2 points)}}~~#1} \\ \\}
+    \addtocounter{qcnt}{1} \setcounter{sqcnt}{1}}
+
+\newcommand{\TFquestion}[1]
+   {\indent \parbox[t]{6.25in}{\underline{~~~~~~~~~~~~} \arabic{qcnt}. \hfill
+   \parbox[t]{6.0in}{#1} \\ \\}
+    \addtocounter{qcnt}{1} \setcounter{sqcnt}{1}}
+
+\newcommand{\DottedLine}
+    {\mbox{ } \hfill \parbox[t]{6.2in}{\dotfill} \\ \\}
+
+\newcommand{\Section}[2]
+    {\noindent {\large #1:} \textsf{\normalsize #2} \\}
+
+\newcommand{\lbox}[1]
+{ \shortstack{\texttt{#1} \\
+              \fbox{~~~~~~~~ \rule[-0.45in]{0.0in}{0.45in} }}}
+
+\newcommand{\ebox}[1]
+{ \shortstack{\texttt{#1} \\
+              \fbox{~~~~~~~~~~~~~~~~ \rule[-0.35in]{0.0in}{0.45in} }}}
+              
+\pagestyle{fancy}
+\rhead{}\chead{}\lhead{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\cfoot{\shortstack{\textit{\textsf{\footnotesize CSC 191}} \\
+\textit{\textsf{\footnotesize}} \\ \thepage}}
+\lfoot{\vspace{-0.35in}\fbox{~~~~~~~~~~~~~~~~ \rule[-0.45in]{0.0in}{0.45in} }}
+\rfoot{\vspace{-0.35in}\fbox{~~~~~~~~~~~~~~~~ \rule[-0.45in]{0.0in}{0.45in} }}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\setcounter{qcnt}{1}
+\setcounter{sqcnt}{1}
+\parbox{3.0in}{{\large \textbf{CSC 191: Activity 02}}\\Mad Libs\\}\hfill
+\parbox{3.0in}{Name: \hrulefill \vspace{6pt} \\} \\\hrulefill
+
+Mad Libs is a word game where players provide different parts of speech, such as nouns, verbs, and adjectives, to fill in blanks in a story. This results in a hilarious and often nonsensical story when read aloud, making it a fun and easy way to get creative and have a good laugh with friends and family. Most of the time Mad Libs are done with pen and paper with one person filling in blanks with the parts of speech before inserting them into the story. In this exercise we will be filling out a Mad Lib called "Bears". 
+
+\section{Bears}
+
+Start by creating a directory for this activity within you \texttt{\$CLASSPATH} and change to that directory. \newline \textbf{Note:} If your \texttt{\$CLASSPATH} variable is not set then set it in your \texttt{.bash\_profile} file in your \texttt{\$HOME}.
+
+\vspace{0.1in}
+
+\begin{boxedminipage}[]{0.93\textwidth}
+\begin{verbatim}
+mkdir $CLASSPATH/activities/activity_02
+cd $CLASSPATH/activities/activity_02
+\end{verbatim}
+\end{boxedminipage}
+\newline
+
+To execute the program run following command:
+
+\vspace{0.1in}
+
+\begin{boxedminipage}[]{0.93\textwidth}
+\begin{verbatim}
+/deac/csc/classes/csc191/software/madlibs/bears
+\end{verbatim}
+\end{boxedminipage}
+\newline
+
+This program will check to see that you have a value set for each blank within the story. It will look at different environment variables to fill in the blanks, and so you'll need to make sure you have assigned a value to each environment variable the program is expecting. You can use the \texttt{export} command to assign values to the corresponding environment variables.
+
+\begin{boxedminipage}[]{0.93\textwidth}
+\begin{verbatim}
+export NOUN_1=Pigeon
+\end{verbatim}
+\end{boxedminipage}
+\newline
+
+If you have any of the variables set, then it will also create a file called \texttt{bears.libs} in your current directory. Instead of running an individual \texttt{export} command for each variable you can also edit this file using the \texttt{code} command and set each of the variables in this file.
+
+\begin{boxedminipage}[]{0.93\textwidth}
+\begin{verbatim}
+code bears.libs
+\end{verbatim}
+\end{boxedminipage}
+\newline
+
+Once you've assigned a value to each variable, you can run this script using the relative path.
+
+\begin{boxedminipage}[]{0.93\textwidth}
+\begin{verbatim}
+./bears.libs
+\end{verbatim}
+\end{boxedminipage}
+\newline
+
+If you've correctly assigned a value to each variable then your story will be printed to the console and also saved to a file \texttt{bears.out} which you can look at later. Note that any environment variables you set using \texttt{export} during this session will not persist the next time you log into DEAC.
+
+\textbf{Scoring:} For this activity you will earn 10 points for having a completed \texttt{bears.out} file in your directory \\
+\texttt{\$CLASSPATH/activites/activity\_02}
+
+\end{document}
